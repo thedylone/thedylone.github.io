@@ -1,4 +1,4 @@
-ansArr = [
+var ansArr = [
     {
         "file":"badApple",
         "title":"bad apple",

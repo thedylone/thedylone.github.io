@@ -37,8 +37,10 @@
 		<h2 style="color: red;" id="incorrect"></h2>
 		<div class="ansChecker" style="text-align: center;">
 			<label for="ansCheckerBox">Answer Checker: </label>
-			<input type="text" id="ansCheckerBox" name="ansCheckerBox">
-			<input type="button" id="checking" value="check" onclick="checkBuzzle(file,$('#ansCheckerBox').val())">
+			<div class="ansCheckerContainer" style="display:inline-block;">
+				<input type="text" id="ansCheckerBox" name="ansCheckerBox">
+				<input type="button" id="checking" value="check" onclick="checkBuzzle(file,$('#ansCheckerBox').val())" style="margin: 2% 0;">
+			</div>
 		</div>
 		<div class="flavour">
 			<p>amogus flavour text </p>
@@ -62,7 +64,7 @@
 </div>
 </body>
 
-<script type="text/javascript" src="ans.json"></script>
+<script type="text/javascript" src="ans.js"></script>
 <script type="text/javascript" src="../lib/ansChecker.js"></script>
 <script type="text/javascript" src="../lib/cookie.js"></script>
 <script type="text/javascript" src="../lib/navbar.js"></script>
