@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bad apple</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="buzzles.css">
+	<link rel="stylesheet" href="../lib/navbar.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicon/site.webmanifest">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+
+<script>
+	var path = window.location.href.split("/").pop()
+	var file = path.split(".")[0]
+</script>
+
+<body>
+	<div class="nav" id="navbar">
+		<img src="../assets/laffeyplush_small.png">
+		<h1>indolant(wifi)</h1>
+		<a href="../index.html">home</a>
+		<a href="../buzzles.html">buzzles</a>
+		<a href="../help.html">help meeeeeee</a>
+		<a href="../about.html">about</a>
+		<a href="javascript:void(0);" class="icon" onclick="navbar()">menu</a>
+	</div>
+	
+<div class="main">
+	<div class="mainText">
+		<h2>bad apple</h2>
+		<h2 style="color: green;" id="solved"></h2>
+		<h2 style="color: red;" id="incorrect"></h2>
+		<div class="ansChecker" style="text-align: center;">
+			<label for="ansCheckerBox">Answer Checker: </label>
+			<input type="text" id="ansCheckerBox" name="ansCheckerBox">
+			<input type="button" id="checking" value="check" onclick="checkBuzzle(file,$('#ansCheckerBox').val())">
+		</div>
+		<div class="flavour">
+			<p>look around, you'll find what to do. cross words, to piece your answer. </p>
+			<a href="https://docs.google.com/spreadsheets/d/1xFwwKLmD_G67rVeBCiz_tU5_-c0MgGzw_Halh7i40Xo/copy" target="_blank">link to google sheets</a>
+		</div>
+		
+		<table class="cells">
+			<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td><td class='black'></td><td>1</td><td>2</td><td>3</td><td class='black'></td><td class='black'></td><td>4</td><td>5</td><td>6</td><td class='black'></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td class='black'></td><td>?</td><td>7</td><td></td><td></td><td>8</td><td></td><td></td><td></td><td></td><td>9</td><td class='black'></td><td></td></tr>
+			<tr><td></td><td class='black'></td><td>10</td><td>11</td><td></td><td></td><td></td><td></td><td class='black'></td><td>12</td><td></td><td></td><td></td><td></td><td class='black'></td></tr>
+			<tr><td class='black'></td><td>13</td><td></td><td></td><td class='black'></td><td>14</td><td></td><td></td><td></td><td></td><td class='black'></td><td></td><td class='black'></td><td class='black'></td><td></td></tr>
+			<tr><td class='black'></td><td>15</td><td></td><td class='black'></td><td>16</td><td></td><td></td><td></td><td></td><td></td><td>17</td><td class='black'></td><td></td><td></td><td></td></tr>
+			<tr><td class='black'></td><td>18</td><td></td><td class='black'></td><td>19</td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td></td><td></td><td></td></tr>
+			<tr><td class='black'></td><td>20</td><td></td><td>21</td><td class='black'></td><td class='black'></td><td>22</td><td></td><td></td><td></td><td></td><td class='black'></td><td></td><td></td><td></td></tr>
+			<tr><td class='black'></td><td>23</td><td></td><td></td><td>24</td><td>25</td><td class='black'></td><td class='black'></td><td>26</td><td class='black'></td><td class='black'></td><td>27</td><td class='black'></td><td></td><td></td></tr>
+			<tr><td class='black'></td><td>28</td><td></td><td></td><td></td><td></td><td>29</td><td>30</td><td class='black'></td><td>31</td><td>32</td><td></td><td>33</td><td class='black'></td><td></td></tr>
+			<tr><td></td><td class='black'></td><td>34</td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td>35</td><td></td><td></td><td></td><td></td><td class='black'></td></tr>
+			<tr><td></td><td></td><td class='black'></td><td>36</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td></td></tr>
+			<tr><td></td><td></td><td></td><td class='black'></td><td>37</td><td></td><td></td><td class='black'></td><td class='black'></td><td>38</td><td></td><td></td><td class='black'></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+		</table>
+		
+		<div id="badAppleClues" style="display: flex;text-align: left;">
+			<div class="column" style="flex:50%;">
+				<table id="across">
+					<tr><th>Across</th></tr>
+					<tr><td>1. Time Lord Doctor</td></tr>
+					<tr><td>4. Soccer chant</td></tr>
+					<tr><td>7. Suit vest</td></tr>
+					<tr><td>10. Waste water</td></tr>
+					<tr><td>12. 1770 BC Egyptian king</td></tr>
+					<tr><td>13. Rodent</td></tr>
+					<tr><td>14. Robert Owen's union (abbr.)</td></tr>
+					<tr><td>15. Intergovernmental organisation</td></tr>
+					<tr><td>16. Scramble</td></tr>
+					<tr><td>18. Excessively lethal (abbr.)</td></tr>
+					<tr><td>19. The Psychology of Occupations author</td></tr>
+					<tr><td>20. GTA V Mexican Gang (abbr.)</td></tr>
+					<tr><td>22. Meme man's step-sister scenario</td></tr>
+					<tr><td>23. Oopsies</td></tr>
+					<tr><td>28. Coprinus shaggy mane (latin, conjugated neuter)</td></tr>
+					<tr><td>31. Silver nitrate (chem.)</td></tr>
+					<tr><td>34. Names meaning "one, alone + warrior" in Old Norse (pl.)</td></tr>
+					<tr><td>35. Finnish rune singer movie</td></tr>
+					<tr><td>36. Touch localisation (medical)</td></tr>
+					<tr><td>37. Worldwide organization that is coordinating Earth-based observations of Halley's comet (abbr.)</td></tr>
+					<tr><td>38. Defunct newspaper in 2013 (abbr.)</td></tr>				
+				</table>
+			</div>
+			<div class ="column" style="flex:50%;">
+				<table id="down">
+					<tr><th>Down</th></tr>
+					<tr><td>1. This page, for e.g.</td></tr>
+					<tr><td>2. Dazs</td></tr>
+					<tr><td>3. Onions in Paris</td></tr>
+					<tr><td>4. Waterfall in lower Michigan</td></tr>
+					<tr><td>5. SHN or QO alternative</td></tr>
+					<tr><td>6. Corral fight brother</td></tr>
+					<tr><td>8. The answer, for e.g.</td></tr>
+					<tr><td>9. Hand in Tokyo</td></tr>
+					<tr><td>10. Plimsoll original name</td></tr>
+					<tr><td>11. Phone Home</td></tr>
+					<tr><td>17. Button on some remotes</td></tr>
+					<tr><td>21. Belch</td></tr>
+					<tr><td>24. Vietnam's capital</td></tr>
+					<tr><td>25. aureus bacteria (short)</td></tr>
+					<tr><td>27. Arctic indigenous</td></tr>
+					<tr><td>29. After T row (sorry for shit hint)</td></tr>
+					<tr><td>30. Umami food additive</td></tr>
+					<tr><td>31. Quality in Quebec</td></tr>
+					<tr><td>32. Laceration</td></tr>
+					<tr><td>33. In statistics, a basic type of linear least squares method (abbr.)</td></tr>				
+				</table>
+				<table id="up">
+					<tr><th>Up</th></tr>
+					<tr><td>26. Kobain's distanced name</td></tr>
+					<tr><td>28. Shade or hue (british)</td></tr>					
+				</table>
+			</div>
+		</div>
+		<div id="selectorDiv" style="text-align: center; margin:1em;">
+			<h2>choose your character</h2>
+			<select id="selector">
+				<option id="default">choose</option>
+				<option id="marisa">marisa</option>
+				<option id="reimu">reimu</option>
+				<option id="sakuya">sakuya</option>
+		</select>
+		</div>
+
+		<div class="switch" id="choose">
+			<table class="cells">
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td></tr>
+				<tr><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>				
+			</table>
+		</div>
+
+		<div class="switch" id="marisa" style="display: none;">
+			<table class="cells">
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td class='black'></td><td class='white'></td><td class='white'></td><td class='white'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='yellow'></td><td class='yellow'></td><td class='yellow'></td><td class='yellow'></td><td class='yellow'></td><td class='black'></td></tr>
+				<tr><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='yellow'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='yellow'></td><td class='white'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='white'></td><td class='yellow'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='yellow'></td><td class='yellow'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='white'></td><td class='yellow'></td><td class='yellow'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td></tr>
+				<tr><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='yellow'></td><td class='yellow'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='yellow'></td><td class='black'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+			</table>
+		</div>
+		<div class="switch" id="reimu" style="display: none;">
+			<table class="cells">
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='red'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='red'></td><td class='red'></td><td class='white'></td><td class='white'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='white'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='white'></td><td class='red'></td><td class='red'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='red'></td><td class='black'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='red'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='red'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td></tr>
+				<tr><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='red'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='red'></td><td class='black'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>				
+			</table>
+		</div>
+		<div class="switch" id="sakuya" style="display: none;">
+			<table class="cells">
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class='black'></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='blue'></td><td class='blue'></td><td class='black'></td><td class='black'></td><td class='blue'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='blue'></td><td class='black'></td><td class='black'></td><td class='black'></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='blue'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='blue'></td><td class='blue'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='blue'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='blue'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='blue'></td><td class='black'></td><td class='black'></td><td class='blue'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='blue'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td></tr>
+				<tr><td></td><td></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='white'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='white'></td><td class='black'></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td class='black'></td><td class='white'></td><td class='black'></td><td class='black'></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td class='black'></td><td class='black'></td><td class='black'></td><td></td><td></td><td></td></tr>				
+			</table>
+		</div>
+	</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="ans.json"></script>
+<script type="text/javascript" src="../lib/ansChecker.js"></script>
+<script type="text/javascript" src="../lib/cookie.js"></script>
+<script type="text/javascript" src="../lib/navbar.js"></script>
+
+<script>
+	$("#selector").on("change",function(){
+		$("div.switch").css("display","none")
+		$("div#"+this.value).css("display","block")
+	})
+</script>
+</html>

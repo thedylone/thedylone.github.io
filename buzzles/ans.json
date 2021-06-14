@@ -1,0 +1,17 @@
+ansArr = [
+    {
+        "file":"badApple",
+        "title":"bad apple",
+        "solution":"dadd45c8788f828dbcbfbd3526f0bfcd28609e821047b7b97a02583bda4028f5"
+    },
+    {
+        "file":"buzzle2",
+        "title":"buzzle 2",
+        "solution":"amogus"
+    },
+    {
+        "file":"buzzle3",
+        "title":"buzzle 3",
+        "solution":"amogus"
+    }
+]

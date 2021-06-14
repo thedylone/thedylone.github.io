@@ -1,0 +1,74 @@
+body {
+	background-color: #222222;
+	color: white;
+	font-family:helvetica, verdana, arial, sans-serif;
+}
+
+a{
+	color:white;
+}
+
+.main {
+	margin-top: 7.5em;
+	width:100%;
+	left:0;
+	padding:0;
+}
+
+.main h2{
+	font-size: 1.75em;
+	text-align: center;
+}
+
+.mainText{
+	padding: 0 10vw;
+}
+
+.fubuhappy{
+	margin:auto;
+	width:90vw;
+	text-align: center;
+	left:0;
+	padding-right: 1px;
+}
+
+.fubuhappy img{
+	max-width:90vw;
+	max-height:80vh;
+}
+
+.fubuhappy iframe{
+	max-width:90vw;
+	max-height:80vh;
+}
+
+.question {
+	font-style: italic;
+	font-size: 1.5em;
+}
+
+.story {
+	font-style: normal;
+	text-align: justify;
+}
+
+table{
+	text-align: left;
+	margin:auto;
+}
+
+th{
+	font-size:2em;
+}
+
+th,td{
+	padding:1.5%;
+}
+
+th.solution,td.solution{
+	text-align: right;
+}
+
+.ansChecker{
+	text-align: center;
+}
