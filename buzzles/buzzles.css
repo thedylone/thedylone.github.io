@@ -44,7 +44,6 @@ table.cells td{
 	border:1px solid black;
 	width: 3vw;
 	height: 3vw;
-	font-size:1.5vw;
 }
 
 td.black{
@@ -65,4 +64,8 @@ td.red{
 
 td.blue{
 	background-color: blue;
+}
+
+td{
+	font-size: clamp(10px, 2vw, 1em);
 }

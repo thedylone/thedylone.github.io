@@ -11,12 +11,10 @@ a{
 .main {
 	margin-top: 7.5em;
 	width:100%;
-	left:0;
-	padding:0;
 }
 
 .main h2{
-	font-size: 1.75em;
+	font-size: 2em;
 	text-align: center;
 }
 
@@ -28,8 +26,6 @@ a{
 	margin:auto;
 	width:90vw;
 	text-align: center;
-	left:0;
-	padding-right: 1px;
 }
 
 .fubuhappy img{
@@ -39,7 +35,7 @@ a{
 
 .fubuhappy iframe{
 	max-width:90vw;
-	max-height:80vh;
+	max-height:calc(100vh - 10em);
 }
 
 .question {
@@ -57,18 +53,10 @@ table{
 	margin:auto;
 }
 
-th{
-	font-size:2em;
-}
-
 th,td{
 	padding:1.5%;
 }
 
 th.solution,td.solution{
 	text-align: right;
-}
-
-.ansChecker{
-	text-align: center;
 }
