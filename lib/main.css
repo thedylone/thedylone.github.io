@@ -53,10 +53,26 @@ table{
 	margin:auto;
 }
 
-th,td{
-	padding:1.5%;
+#buzzleTable{
+	display: table;
+	width: 80%;
+	margin:auto;
 }
 
-th.solution,td.solution{
+#buzzleTable > div{
+	display: table-row;
+	height: 3em;
+}
+
+#buzzleTable > div > *{
+	display: table-cell;
+	vertical-align:middle;
+}
+
+#buzzleTable .solution{
 	text-align: right;
+}
+
+#buzzleTable .buzzle{
+	text-align: left;
 }

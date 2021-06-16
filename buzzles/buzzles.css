@@ -42,8 +42,9 @@ table.cells{
 
 table.cells td{
 	border:1px solid black;
-	width: 3vw;
-	height: 3vw;
+	width: clamp(20px,5vw,40px);
+	height: clamp(20px,5vw,40px);
+	font-size: clamp(10px, 2vw, 1em);
 }
 
 td.black{
@@ -66,6 +67,7 @@ td.blue{
 	background-color: blue;
 }
 
-td{
+.column{
+	padding: 1%;
 	font-size: clamp(10px, 2vw, 1em);
 }
