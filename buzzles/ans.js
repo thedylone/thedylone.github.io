@@ -5,6 +5,7 @@ var ansArr = [
         "solution":"66a287523e6af302e6dc48b2414bf43d825af64f165d974cac2cd86b09b49aa1",
         "salt":"sh4zam"
     },
+
     {
         "file":"badApple",
         "title":"🅱&#xFE0F;ad apple",
@@ -19,5 +20,26 @@ var ansArr = [
         "salt":"al1yxc14",
         "hint":"87dd73d4d9d2b4d731084a471aba06d33a061dc775d5b99f3e85e16cad158644",
         "prompt":"try googling KIMOTA: who's the character?"
+    },
+
+    {
+        "file":"plague",
+        "title":"🅱&#xFE0F;lague inc",
+        "solution":"",
+        "salt":"",
+        "hint":"",
+        "prompt":""
+    },
+
+    {
+        "file":"meta",
+        "title":"META",
+        "solution":"1b47ce33dad827a4a122f764549fd927fbaac04aa7dc856749373db1b0949df1",
+        "salt":"happym0m0"
+    },
+
+    {
+        "file":"final",
+        "title":"FINAL",
     }
 ]
