@@ -24,6 +24,11 @@ a{
 	padding: 0 10vw;
 }
 
+.story{
+	margin:2.5em;
+	border-bottom: 1px solid black;
+}
+
 .flavour{
 	font-style: italic;
 	text-align: center;
