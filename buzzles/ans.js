@@ -25,10 +25,8 @@ var ansArr = [
     {
         "file":"plague",
         "title":"🅱&#xFE0F;lague inc",
-        "solution":"70104c92bc14673bd9a1ae28c1d943eeb0df45dd007faefb6876380b25b7c6f9",
-        "salt":"astra1",
-        "hint":"",
-        "prompt":""
+        "solution":"9be8fe0ec8a0fd4c395d61ffb6d6661f17e48a1beaa377889683e2232aea8ed7",
+        "salt":"astra1"
     },
 
     {
