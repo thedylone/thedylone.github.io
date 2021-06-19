@@ -25,8 +25,8 @@ var ansArr = [
     {
         "file":"plague",
         "title":"🅱&#xFE0F;lague inc",
-        "solution":"",
-        "salt":"",
+        "solution":"70104c92bc14673bd9a1ae28c1d943eeb0df45dd007faefb6876380b25b7c6f9",
+        "salt":"astra1",
         "hint":"",
         "prompt":""
     },

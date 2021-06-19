@@ -46,21 +46,66 @@
 			<p>amogus flavour text </p>
 		</div>
 		
-		<table class="cells">
-			<tr><td>cell</td></tr>
-		</table>
-		
-		<div id="flexColumn" style="display: flex;text-align: left;">
-			<div class="column" style="flex:50%;">
-				<h2>column</h2>
-			</div>
-			<div class ="column" style="flex:50%;">
-				<h2>column</h2>
-			</div>
-		</div>
-		
 	</div>
-
+	<div class="map" style="width: 99%; max-width: 1280px;margin: auto;">
+		<div class="svg-container" style="width: 100%;vertical-align: middle;margin: auto;overflow: hidden;">
+		<svg viewBox="0 0 1920 1080" preserveAspectRatio="xMinYMin meet" class="svg-content">
+			<image height="1080" width="1920" xlink:href="plague/plague.png"></image>
+			<rect id="default" height="1045" width="1920" style="fill: transparent;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id="canada" points="50,100,250,115,370,130,390,80,450,50,560,160,540,225,590,300,480,360,380,330,230,330,110,225,25,285,20,130" style="fill:lime;" onclick="showCountry($(this).attr('id'))"/>
+			<polygon id="usa" points="230,330,380,330,480,360,590,300,455,455,460,485,450,460,390,460,375,485,270,445,235,400" style="fill:limegreen;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='mexico' points='270,445,375,485,385,525,425,510,420,525,400,530,400,545,330,520' style="fill:lime;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='cAmerica' points='400,545,400,530,420,525,480,580,450,580' style="fill:yellowgreen;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='carribean' points='440,500,480,500,525,525,500,530' style="fill:yellowgreen;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='colombia' points='470,580,480,580,500,555,550,565,610,600,570,615,565,590,540,600,545,610,530,615,525,610,511,611,510,640,480,620,460,640' style="fill:yellow;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='brazil' points='510,640,511,611,525,610,530,615,545,610,540,600,565,590,570,615,610,600,700,650,670,730,590,810,575,805,600,755,575,760,550,735,575,725,535,670,515,680,495,655' style="fill:orange;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='peru' points='460,640,480,620,510,640,495,655,515,680,510,715,475,680' style="fill:orange;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='bolivia' points='515,680,535,670,575,725,550,735,522,742,520,715,512,709' style="fill:orangered;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='argentina' points='510,715,512,709,520,715,522,742,550,735,575,760,600,755,575,805,580,830,520,930,540,960,500,960,480,900' style="fill:orangered;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='greenland' points='670,300,600,120,700,50,780,60,760,200' style="fill:turquoise;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='uk' points='920,300,950,380,880,380' style="fill:turquoise;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='spain' points='930,437,955,445,930,480,890,480,892,435' style="fill:turquoise;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='sweden' points='997,312,1004,297,1002,258,1012,253,1023,210,1045,190,1061,203,1062,234,1027,287,1040,300,1010,345' style="fill:turquoise;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='iceland' points='790,220,850,220,850,260,790,260' style="fill:blue;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='france' points='955,445,930,437,930,390,960,375,970,380,971,392,980,395,978,405,970,415,977,420,975,428,980,435' style="fill:blue;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='germany' points='978,405,980,395,971,392,970,380,960,375,985,355,990,320,1013,357,1015,380,1000,390,1010,400,1005,407' style="fill:blue;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='poland' points='1015,380,1013,357,1034,348,1042,350,1050,353,1060,353,1060,374,1063,383,1054,395,1043,394' style="fill:blue;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='italy' points='980,435,975,428,977,420,997,412,1009,415,1007,420,1005,435,1035,460,1015,485,980,465' style="fill:blue;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='norway' points='1100,180,1088,190,1080,175,1070,193,1050,185,1045,190,1023,210,1012,253,1002,258,1004,297,997,312,973,320,960,280,988,258,1030,170,1075,155,1100,170' style="fill:blue;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='cEurope' points='977,420,970,415,978,405,1005,407,1010,400,1000,390,1015,380,1043,394,1054,395,1055,403,1090,402,1085,420,1090,423,1085,433,1058,433,1040,415,1033,420,1025,413,1010,420,1007,420,1009,415,997,412' style="fill:navy;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='ukraine' points='1090,423,1085,420,1090,402,1055,403,1054,395,1063,383,1060,374,1072,372,1082,376,1095,376,1102,370,1116,370,1116,377,1122,377,1122,383,1145,389,1144,404,1136,403,1136,410,1118,416,1125,425,1110,430,1105,415,1097,415' style="fill:navy;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='baltic' points='1102,370,1095,376,1082,376,1072,372,1060,374,1060,353,1050,353,1042,350,1050,320,1070,300,1087,300,1078,310,1085,335,1100,340,1108,360,1102,361' style="fill:navy;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='finland' points='1062,234,1061,203,1045,190,1050,185,1070,193,1080,175,1088,190,1100,272,1083,292,1050,300,1050,265,1070,242' style="fill:navy;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='balkans' points='1010,420,1025,413,1033,420,1040,415,1058,433,1085,433,1080,445,1075,445,1072,455,1060,460,1070,470,1055,490,1035,448' style="fill:purple;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='russia' points='1087,300,1078,310,1085,335,1100,340,1108,360,1102,361,1102,370,1116,370,1116,377,1122,377,1122,383,1145,389,1144,404,1136,403,1136,410,1130,427,1153,449,1160,449,1170,465,1188,468,1196,456,1180,427,1191,416,1178,395,1183,385,1189,389,1188,381,1208,373,1250,381,1254,354,1300,340,1318,358,1330,350,1350,380,1390,395,1410,380,1440,387,1450,370,1507,393,1545,390,1565,355,1615,405,1630,400,1607,440,1607,445,1625,440,1740,380,1916,226,1835,175,1455,55,1100,180,1088,190,1100,272,1083,292' style="fill:purple;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='kazakhstan' points='1191,416,1178,395,1183,385,1189,389,1188,381,1208,373,1250,381,1254,354,1300,340,1318,358,1330,350,1350,380,1390,395,1375,411,1363,410,1350,445,1338,438,1305,440,1290,454,1275,435,1256,436,1241,421,1226,426,1226,451,1208,445' style="fill:navy;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='cAsia' points='1208,445,1226,451,1226,426,1241,421,1256,436,1275,435,1290,454,1305,440,1338,438,1350,445,1315,465,1321,478,1305,478,1304,469,1289,479,1276,476,1260,490,1252,490,1252,482,1230,470,1215,475' style="fill:purple;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='turkey' points='1072,455,1075,445,1080,445,1096,452,1115,445,1145,455,1153,449,1160,449,1170,465,1167,475,1160,475,1155,479,1130,479,1124,486,1080,485' style="fill:blueviolet;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='iran' points='1215,475,1230,470,1252,482,1252,490,1253,525,1261,540,1252,550,1210,540,1188,522,1167,475,1170,465,1188,468,1205,480' style="fill:blueviolet;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='iraq' points='1155,479,1160,475,1167,475,1188,522,1188,532,1139,510,1139,501,1151,494,1151,484' style="fill:pink;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='midEast' points='1130,513,1135,518,1127,526,1120,526,1114,514,1124,486,1130,479,1155,479,1151,484,1151,494,1139,501,1139,510' style="fill:pink;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='saudiArabia' points='1117,533,1120,526,1127,526,1135,518,1130,513,1139,510,1188,532,1210,555,1227,545,1255,575,1165,620,1130,550' style="fill:red;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='nAfrica' points='1123,562,1115,567,1068,567,1063,580,1025,560,1017,562,1000,560,962,583,896,538,896,545,880,545,874,571,852,572,907,487,990,475,1050,505,1114,514,1120,526,1117,533' style="fill:pink;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='wAfrica' points='852,572,874,571,880,545,896,545,896,538,962,583,1000,560,1017,562,1019,595,1005,610,1015,620,997,650,984,659,900,660,850,620' style="fill:blueviolet;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='cAfrica' points='984,659,997,650,1015,620,1005,610,1019,595,1017,562,1025,560,1063,580,1063,600,1055,620,1082,660,1095,660,1101,672,1092,680,1087,740,1090,750,1063,737,1063,748,1053,748,1057,771,999,772,985,685' style="fill:blueviolet;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='eAfrica' points='1057,771,1053,748,1063,748,1063,737,1090,750,1087,740,1092,680,1101,672,1095,660,1082,660,1055,620,1063,600,1063,580,1068,567,1115,567,1123,562,1167,627,1215,618,1140,715,1150,760,1107,825,1100,800' style="fill:blueviolet;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='sAfrica' points='999,772,1057,771,1100,800,1107,825,1084,864,1035,870' style="fill:purple;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='madagascar' points='1191,745,1200,760,1173,825,1160,795,1165,765' style="fill:navy;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='afghanistan' points='1253,525,1252,490,1260,490,1276,476,1289,479,1304,469,1305,478,1321,478,1310,481,1293,512,1274,525' style="fill:purple;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='pakistan' points='1252,550,1261,540,1253,525,1274,525,1293,512,1310,481,1321,478,1337,490,1317,493,1322,515,1295,543,1301,556,1288,560,1280,550' style="fill:purple;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='india' points='1288,560,1301,556,1295,543,1322,515,1317,493,1337,490,1350,488,1343,514,1355,520,1351,531,1390,545,1435,525,1440,530,1410,575,1350,605,1360,650,1340,655,1300,575' style="fill:navy;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='china' points='1440,530,1435,525,1390,545,1351,531,1355,520,1343,514,1350,488,1337,490,1321,478,1315,465,1350,445,1363,410,1375,411,1390,395,1410,380,1440,387,1450,370,1507,393,1545,390,1565,355,1615,405,1630,400,1607,440,1574,462,1560,540,1515,580,1488,572,1482,562,1455,570' style="fill:navy;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='korea' points='1574,462,1607,400,1607,445,1595,470,1605,485,1595,500,1580,500,1575,473' style="fill:navy;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='japan' points='1665,420,1690,440,1660,500,1600,520,1600,500' style="fill:blue;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='sea' points='1410,575,1440,530,1455,570,1482,562,1488,572,1480,585,1506,616,1465,655,1475,680,1445,660,1420,600' style="fill:blue;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='indonesia' points='1420,650,1475,685,1530,640,1575,675,1560,730,1480,730,1410,660' style="fill:turquoise;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='philippines' points='1570,660,1550,640,1540,600,1550,580,1560,590,1585,650' style="fill:blue;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='newGuinea' points='1645,670,1690,725,1620,715,1585,675' style="fill:limegreen;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='australia' points='1642,720,1700,805,1670,900,1590,860,1510,840,1500,775,1595,720' style="fill:limegreen;" onclick="showCountry($(this).attr('id'))" />
+			<polygon id='newZealand' points='1770,830,1805,850,1770,920,1730,900' style="fill:lime;" onclick="showCountry($(this).attr('id'))" />
+		</svg>
+		</div>
+	</div>
 </div>
 </body>
 
@@ -70,6 +115,8 @@
 <script type="text/javascript" src="../lib/navbar.js"></script>
 
 <script>
-
+	function showCountry(country){
+		alert(country);
+	}
 </script>
 </html>
