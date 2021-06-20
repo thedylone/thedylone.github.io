@@ -34,10 +34,5 @@ var ansArr = [
         "title":"META",
         "solution":"1b47ce33dad827a4a122f764549fd927fbaac04aa7dc856749373db1b0949df1",
         "salt":"happym0m0"
-    },
-
-    {
-        "file":"final",
-        "title":"FINAL",
     }
 ]
