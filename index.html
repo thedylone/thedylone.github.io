@@ -1,40 +1,458 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>thedylone</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="lib/main.css">
-	<link rel="stylesheet" href="lib/navbar.css">
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-	<link rel="manifest" href="assets/favicon/site.webmanifest">
-	<script type="text/javascript" src="lib/navbar.js"></script>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>thedylone</title>
+    <meta name="description" content="thedylone github page">
+    <link rel="shortcut icon" href="static/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/site.webmanifest">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800%7COpen+Sans+Condensed:300&amp;subset=latin,cyrillic"
+        rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="static/css/screen.css">
+    <!-- <link rel="stylesheet" href="static/css/custom.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="static/js/body.js"></script>
+    <!-- <script src="static/js/head.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://kit.fontawesome.com/3bcd4a3e8d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <!-- header-->
+    <header class="main-header">
+        <div class="first-nav">
+            <div class="container">
+                <nav class="first-nav__links">
+                    <ul>
+                        <li>
+                            <a class="is-selected">homepage</a>
+                        </li>
+                        <li>
+                            <a href="projects.html">projects</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="first-nav__navcontrol icon icon_menu js-navcontrol" href="#"><i class="fas fa-bars"></i></a>
+            </div>
+        </div>
+        <div class="second-nav js-nav">
+            <div class="container"><a class="second-nav__logo"><span></span></a>
+                <nav class="menu">
+                    <ul>
+                        <li><a class="js-link js-anchor is-selected" href="#home">home</a></li>
+                        <li><a class="js-link js-anchor" href="#about">about</a></li>
+                        <li><a class="js-link js-anchor" href="#history">history</a></li>
+                        <li><a class="js-link js-anchor" href="#projects">projects</a></li>
+                        <li><a class="js-link js-anchor" href="#socials">socials</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- home section-->
+    <section class="home-section" id="home">
+        <div class="home-scene" id="scene">
+            <div data-depth="0.1" class="home-section__bg">
+                <img src="static/images/bg.png">
+            </div>
+            <div data-depth="0.2" class="home-section__bg gif-overlay">
+                <img src="static/images/overlay.gif">
+            </div>
+            <div class="home-section__header-wrapper" data-depth="0.4">
+                <header class="home-section__header">
+                    <h1>thedylone</h1>
+                </header>
+            </div>
+        </div>
+        <!-- parallax js -->
+        <script>
+            var scene = document.getElementById('scene');
+            var parallaxInstance = new Parallax(scene, {
+                relativeInput: true,
+                hoverOnly: true,
+                invertX: false,
+                invertY: false
+            });
+        </script>
+    </section>
+    <!-- about section-->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-section__card animate__animated" animation-style="fadeInUp" animation-duration="0.5s"
+                animation-delay="0s">
+                <header class="about-section__card-header">
+                    <h2>about me</h2>
+                    <h4>things you wished you never knew</h4>
+                </header>
+                <div class="about-section__card-info">
+                    <p>unreasonably average at everything (except at things where im just bad). loves penguins, cats,
+                        and sleeping. sometimes i do puzzles as well under 🅱️uzzle Idiots.</p>
+                    <p>doing and learning whatever i can. occasionally doing something completely irrelevant. more often
+                        than not, not doing anything anyway.</p>
+                    <p>hololive: fubukers 🌽, pekorrat 🥕, big respect to sussei ☄️</p>
+                    <p>unfortunately a gacha player</p>
+                    <!-- random quote -->
+                    <blockquote>
+                        <p>"born to create flagged name</p>
+                        <p>forced to change riot id" ~ me, 2021</p>
+                    </blockquote>
+                    <!-- about status -->
+                    <p class="about-section__card-info-status">
+                        <span>status:</span> sadge or slepge
+                    </p>
+                </div>
+            </div>
+            <!-- polaroid photo -->
+            <div class="about-section__image animate__animated" animation-style="fadeInLeft" animation-duration="1s"
+                animation-delay="0.25s">
+                <div class="about-section__image__frame">
+                    <img src="static/images/about-image.jpg">
+                    <h4>:fubuhappy:</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- history section-->
+    <section class="common-section" id="history">
+        <div class="container">
+            <header class="common-section__header animate__animated" animation-style="fadeIn" animation-duration="0.5s"
+                animation-delay="0s">
+                <h2>history</h2>
+                <h4>my dark past and bleak future</h4>
+            </header>
+            <!-- timeline -->
+            <div class="timeline">
+                <!-- timeline js -->
+                <script>
+                    function toggleTimeline(obj) {
+                        var state = obj.find(".timeline__event__description").css("display");
+                        $(".timeline__event__description").slideUp(500)
+                        if (state == "none") {
+                            obj.find(".timeline__event__description").slideDown(500)
+                        }
+                    }
+                </script>
+                <!-- events -->
+                <div class="timeline__event animate__animated timeline__event--type1" animation-style="fadeInDown"
+                    animation-duration="1s" animation-delay="2s">
+                    <div class="timeline__event__icon">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <div class="timeline__event__date">
+                        now
+                    </div>
+                    <div class="timeline__event__content" onclick="toggleTimeline($(this))">
+                        <div class="timeline__event__title">
+                            unemployed lmao
+                        </div>
+                        <div class="timeline__event__description">
+                            <p>sleeping at home</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__event animate__animated timeline__event--scc" animation-style="fadeInDown"
+                    animation-duration="1s" animation-delay="1.5s">
+                    <div class="timeline__event__icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline__event__date">
+                        2020 to 2022
+                    </div>
+                    <div class="timeline__event__content" onclick="toggleTimeline($(this))">
+                        <div class="timeline__event__title">
+                            SAF Counselling Centre
+                        </div>
+                        <div class="timeline__event__description">
+                            <p>enlisted for NS 🤮 and worked as a counselling assistant. appointed as counselling
+                                assistant in-charge (CAIC) and was awarded Best Soldier of the Month</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__event animate__animated timeline__event--raffles" animation-style="fadeInDown"
+                    animation-duration="1s" animation-delay="1s">
+                    <div class="timeline__event__icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline__event__date">
+                        2014 to 2019
+                    </div>
+                    <div class="timeline__event__content" onclick="toggleTimeline($(this))">
+                        <div class="timeline__event__title">
+                            Raffles Institution
+                        </div>
+                        <div class="timeline__event__description">
+                            <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fas fa-pencil-alt"></i></span>
+                                    Galileo Programme from Year 1 and Year 2
+                                </li>
+                                <li><span class="fa-li"><i class="fas fa-pencil-alt"></i></span>
+                                    Raffles Academy Physics from Year 3 to Year 6
+                                    <ul class="fa-ul">
+                                        <li><span class="fa-li"><i class="fas fa-pencil-alt"></i></span>
+                                            Singapore Junior Physics Olympiad Gold
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-pencil-alt"></i></span>
+                                            participated in Singapore Physics Olympiad
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-pencil-alt"></i></span>
+                                            H3 Physics Distinction
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span class="fa-li"><i class="fas fa-pencil-alt"></i></span>
+                                    Raffles Academy Chemistry from Year 5 to Year 6 (don't ask me how i got in lmao)
+                                    <ul class="fa-ul">
+                                        <li><span class="fa-li"><i class="fas fa-pencil-alt"></i></span>
+                                            Singapore Junior Chemistry Olympiad Bronze
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span class="fa-li"><i class="fas fa-baseball-ball"></i></span>
+                                    Raffles Softball Right Fielder from Year 1 to Year 4
+                                    <ul class="fa-ul">
+                                        <li><span class="fa-li"><i class="fas fa-baseball-ball"></i></span>
+                                            National School Games 1st Runner Up
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-baseball-ball"></i></span>
+                                            Singapore Recreation Club Softball Carnival Champions
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-baseball-ball"></i></span>
+                                            Overseas Training Trip to Perth, Australia
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span class="fa-li"><i class="fas fa-rocket"></i></span>
+                                    Raffles Astronomy Club Treasurer from Year 5 to Year 6
+                                    <ul class="fa-ul">
+                                        <li><span class="fa-li"><i class="fas fa-rocket"></i></span>
+                                            managed the club's finances
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-rocket"></i></span>
+                                            planned and presented lecuters to club members
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-rocket"></i></span>
+                                            organised events such as AstroNite, Astrigue, Astro Club Camp
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-rocket"></i></span>
+                                            participated in Astronomy competitions
+                                            <ul class="fa-ul">
+                                                <li><span class="fa-li"><i class="fas fa-rocket"></i></span>
+                                                    Year 2: Nanyang Polytechnic NYP Astronomy Competition Merit
+                                                </li>
+                                                <li><span class="fa-li"><i class="fas fa-rocket"></i></span>
+                                                    Year 3: AstroChallenge 2016 Junior Category
+                                                </li>
+                                                <li><span class="fa-li"><i class="fas fa-rocket"></i></span>
+                                                    Year 5: Singapore Astronomy Olympiad
+                                                </li>
+                                                <li><span class="fa-li"><i class="fas fa-rocket"></i></span>
+                                                    Year 6: Singapore Astronomy Olympiad, AstroChallenge 2019 Senior
+                                                    Category 1st Runner Up and Best Observation (lol)
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span class="fa-li"><i class="fas fa-flask"></i></span>
+                                    undertook various research projects
+                                    <ul class="fa-ul">
+                                        <li><span class="fa-li"><i class="fas fa-flask"></i></span>
+                                            Year 2: self-initiated school-based research, <i>An Investigation of the
+                                                application of sodium silicate on different metals as an inhibitor and
+                                                its effects on corrosion prevention</i>
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-flask"></i></span>
+                                            Year 3: research attachment at National Institute of Education, <i>New
+                                                'Stimuli'-Responsive Hydrogels for targeted applications</i>
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-flask"></i></span>
+                                            Year 5: research attachment at <a
+                                                href="https://ihealthtech.nus.edu.sg/">BIGHEART (now iHealthtech)</a>,
+                                            <i>Transparent, Self-healing and Stretchable Conductor for
+                                                Electroluminescent Device Applications</i>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
 
-	<div class="nav" id="navbar">
-		<img src="assets/laffeyplush_small.png">
-		<h1>indolant(wifi)</h1>
-		<a href="index.html">home</a>
-		<a href="buzzles.html">buzzles</a>
-		<a href="help.html">help meeeeeee</a>
-		<a href="about.html">about</a>
-		<a href="javascript:void(0);" class="icon" onclick="navbar()">menu</a>
-	</div>
-	
-<div class="main">
-	<div class="fubuhappy">
-		<a href="fubuhappy.html"><img src="assets/fubuhappy.jpg"></a>
-		<p>:fubuhappy:</p>
-	</div>
+                    </div>
+                </div>
+                <div class="timeline__event animate__animated timeline__event--acs" animation-style="fadeInDown"
+                    animation-duration="1s" animation-delay="0.5s">
+                    <div class="timeline__event__icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline__event__date">
+                        2008 to 2013
+                    </div>
+                    <div class="timeline__event__content" onclick="toggleTimeline($(this))">
+                        <div class="timeline__event__title">
+                            Anglo Chinese School (Primary)
+                        </div>
+                        <div class="timeline__event__description">
+                            <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fas fa-running"></i></span>
+                                    School's dance team <i>Synergy</i>
+                                    <ul class="fa-ul">
+                                        <li><span class="fa-li"><i class="fas fa-running"></i></span>
+                                            SYF Gold With Honours
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-running"></i></span>
+                                            Danceworks! Champions
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-running"></i></span>
+                                            StreetBliss IV Champions
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-running"></i></span>
+                                            invited to perform at various events, such as NUS Dance Blast!
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span class="fa-li"><i class="fas fa-pencil-alt"></i></span>
+                                    Gifted Education Programme (2011 - 2013)
+                                </li>
+                                <li><span class="fa-li"><i class="fas fa-futbol"></i></span>
+                                    was in football school team and badmintion training team until i left both to focus
+                                    on dancing lol
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline__event animate__animated timeline__event--type1" animation-style="fadeInDown"
+                    animation-duration="1s" animation-delay="0s">
+                    <div class="timeline__event__icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="timeline__event__date">
+                        2001
+                    </div>
+                    <div class="timeline__event__content" onclick="toggleTimeline($(this))">
+                        <div class="timeline__event__title">
+                            born
+                        </div>
+                        <div class="timeline__event__description">
+                            <p>sadge</p>
+                        </div>
+                    </div>
+                </div>
 
-</div>
+            </div>
+        </div>
+    </section>
+    <!-- projects section-->
+    <section class="common-section" id="projects">
+        <header class="common-section__header animate__animated" animation-style="fadeIn" animation-duration="1s"
+            animation-delay="0s">
+            <a href="projects.html">
+                <h2>projects</h2>
+            </a>
+            <p>things im somewhat satisfied with to display publicly for everyone to judge</p>
+        </header>
+        <div class="projects-wrap animate__animated" animation-style="fadeInLeft" animation-duration="1s"
+            animation-delay="0.25s">
+            <div class="grid-container">
+                <div class="projects">
+                    <figure class="projects__item"><img src="static/images/projects/1.png" alt="blender image">
+                        <figcaption><a class="icon icon_link" href="projects.html#blender" rel="nofollow">blender
+                                stuff</a></figcaption>
+                    </figure>
+                    <figure class="projects__item"><img src="static/images/projects/1.png" alt="blender image">
+                        <figcaption><a class="icon icon_link" href="projects.html#blender" rel="nofollow">blender
+                                stuff</a></figcaption>
+                    </figure>
+                    <figure class="projects__item"><img src="static/images/projects/1.png" alt="blender image">
+                        <figcaption><a class="icon icon_link" href="projects.html#blender" rel="nofollow">blender
+                                stuff</a></figcaption>
+                    </figure>
+                    <figure class="projects__item"><img src="static/images/projects/1.png" alt="blender image">
+                        <figcaption><a class="icon icon_link" href="projects.html#blender" rel="nofollow">blender
+                                stuff</a></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- social section-->
+    <div class="contacts-section" id="socials">
+        <div class="card-frame">
+            <section data-tilt data-tilt-scale="1.2" data-tilt-glare="true" data-tilt-maxglare=".2" class="contact-card" id="card">
+                <div class="contact-info">
+                    <h1>thedylone</h1>
+                    <div class="contact-socials">
+                        <a href="https://twitter.com/thedylone" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.twitch.tv/thedylone" target="_blank"><i class="fab fa-twitch"></i></a>
+                        <a href="https://open.spotify.com/user/thepipone" target="_blank"><i
+                                class="fab fa-spotify"></i></a>
+                        <a href="https://www.instagram.com/lan_dy_lan/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCC4n0BS6rKU-CvjwrUm6Fig" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- card js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    </div>
+    <!-- footer-->
+    <footer class="main-footer">
+        <div class="container">
+            <p class="main-footer__copyright"><span>made by thedylone</span></p>
+            <a class="main-footer__gotop js-link js-anchor animate__animated animate__bounce animate__infinite"
+                style="opacity: 1;" href="#home"><i class="fas fa-arrow-circle-up"></i></a>
+            <p class="main-footer__links"><a onclick="openModal($('#modal-credits'))">credits</a></p>
+        </div>
+    </footer>
+    <!-- modal stuff -->
+    <script>
+        function openModal(modal) {
+            modal.css("display", "block");;
+            const body = document.body;
+            body.style.top = -1 * window.pageYOffset + 'px';
+            body.style.position = 'fixed';
+        }
+        window.onclick = function (e) {
+            modal = document.getElementById("modal-credits")
+            if (e.target == modal) {
+                modal.style.display = "none";
+                const body = document.body;
+                const scrollY = body.style.top;
+                body.style.position = '';
+                body.style.top = '';
+                window.scrollTo(0, parseInt(scrollY || '0') * -1);
+            }
+        }
+    </script>
+    <!-- credits modal -->
+    <div id="modal-credits" class="modal">
+        <div class="modal-content">
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>big thanks to <a
+                        href="https://github.com/orlovmax" target="_blank">Maxim Orlov</a> for designing the base
+                    template</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>using <a href="https://animate.style/"
+                        target="_blank">animate.css</a> for the animation keyframes</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>also appreciate <a
+                        href="https://matthew.wagerfield.com/parallax/" target="_blank">parallax.js</a> for the parallax
+                    effect at the top</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>great library <a
+                        href="http://gijsroge.github.io/tilt.js/" target="_blank">tilt.js</a> providing the tilt effects
+                </li>
+                <li><span class="fa-li"><i class="fas fa-check"></i><a href="https://fontawesome.com/"
+                            target="_blank"></span>font awesome</a> for the pretty nice icons</li>
+            </ul>
 
+        </div>
+    </div>
 </body>
-<script>
-	
-</script>
+
 </html>

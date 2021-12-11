@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="static/js/body.js"></script>
     <!-- <script src="static/js/head.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://kit.fontawesome.com/3bcd4a3e8d.js" crossorigin="anonymous"></script>
 </head>
 
@@ -34,7 +35,7 @@
                             <a href="../">homepage</a>
                         </li>
                         <li>
-                            <a href="projects.html">projects</a>
+                            <a class="is-selected">projects</a>
                         </li>
                     </ul>
                 </nav>
@@ -45,25 +46,78 @@
             <div class="container"><a class="second-nav__logo"><span></span></a>
                 <nav class="menu">
                     <ul>
-                        <li><a class="js-link js-anchor is-selected" href="#home">404</a></li>
+                        <li><a class="js-link js-anchor is-selected" href="#home">home</a></li>
+                        <li><a class="js-link js-anchor" href="#blender">blender</a></li>
+                        <li><a class="js-link js-anchor" href="#buzzle">buzzle</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <!-- error section-->
-    <section class="error-section" id="home">
-        <div class="container animate__animated" animation-style="fadeIn" animation-duration="0.5s"
-        animation-delay="0s">
-            <header class="error-section__header">
-                <h2>404</h2>
-                <h4>how did you get here?</h4>
-            </header>
-            <div class="error-section__image">
-                <img src="static/images/smh.gif">
+    <!-- home section-->
+    <section class="home-section" id="home">
+        <div class="home-scene" id="scene">
+            <div data-depth="0.1" class="home-section__bg">
+                <img src="static/images/projects/1.png">
+            </div>
+            <div class="home-section__header-wrapper" data-depth="0.4">
+                <header class="home-section__header">
+                    <h1>projects</h1>
+                </header>
             </div>
         </div>
+        <!-- parallax js -->
+        <script>
+            var scene = document.getElementById('scene');
+            var parallaxInstance = new Parallax(scene, {
+                relativeInput: true,
+                hoverOnly: true,
+                invertX: false,
+                invertY: false
+            });
+        </script>
     </section>
+    <!-- blender section-->
+    <section class="common-section" id="blender">
+        <div class="container">
+            <header class="common-section__header animate__animated" animation-style="fadeIn" animation-duration="0.5s"
+                animation-delay="0s">
+                <h2>blender</h2>
+                <h4>idk work in progress for now</h4>
+            </header>
+        </div>
+    </section>
+    <!-- buzzle section-->
+    <section class="common-section" id="buzzle">
+        <header class="common-section__header animate__animated" animation-style="fadeIn" animation-duration="1s"
+            animation-delay="0s">
+            <h2>🅱️uzzle</h2>
+            <h4>idk quite bad at these</h4>
+        </header>
+    </section>
+    <!-- social section-->
+    <div class="contacts-section" id="socials">
+        <div class="card-frame">
+            <section data-tilt data-tilt-scale="1.2" data-tilt-glare="true" data-tilt-maxglare=".2" class="contact-card"
+                id="card">
+                <div class="contact-info">
+                    <h1>thedylone</h1>
+                    <div class="contact-socials">
+                        <a href="https://twitter.com/thedylone" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.twitch.tv/thedylone" target="_blank"><i class="fab fa-twitch"></i></a>
+                        <a href="https://open.spotify.com/user/thepipone" target="_blank"><i
+                                class="fab fa-spotify"></i></a>
+                        <a href="https://www.instagram.com/lan_dy_lan/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCC4n0BS6rKU-CvjwrUm6Fig" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- card js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    </div>
     <!-- footer-->
     <footer class="main-footer">
         <div class="container">
@@ -78,7 +132,7 @@
         function openModal(modal) {
             modal.css("display", "block");;
             const body = document.body;
-            body.style.top = -1*window.pageYOffset+'px';
+            body.style.top = -1 * window.pageYOffset + 'px';
             body.style.position = 'fixed';
         }
         window.onclick = function (e) {
