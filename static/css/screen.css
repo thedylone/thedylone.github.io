@@ -1,3 +1,8 @@
+:root {
+    --bg-color-1:#9444b3;
+    --bg-color-2:#fd2289;
+}
+
 @font-face {
     font-family: 'amore lettera';
     src: url(../fonts/amoreLettera/AmoreLettera-6YgYD.ttf) format("truetype");
@@ -184,13 +189,13 @@ body {
     padding-top: 50px;
     width: 100%;
     clear: both;
-    border-top: 2px solid #9444b3;
-    border-image: linear-gradient(90deg, #9444b3, #fd2289) 5;
+    border-top: 2px solid var(--bg-color-1);
+    border-image: linear-gradient(90deg, var(--bg-color-1), var(--bg-color-2)) 5;
 }
 
 .common-section:last-of-type {
-    border-bottom: 2px solid #9444b3;
-    border-image: linear-gradient(90deg, #9444b3, #fd2289) 5;
+    border-bottom: 2px solid var(--bg-color-1);
+    border-image: linear-gradient(90deg, var(--bg-color-1), var(--bg-color-2)) 5;
 }
 
 .common-section:before,
@@ -379,7 +384,7 @@ header > a{
     margin-left: -100px;
     margin-top: -60px;
     text-align: center;
-    color: #9444b3;
+    color: var(--bg-color-1);
     font-size: 120px;
     line-height: 120px;
     font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif
@@ -398,8 +403,8 @@ header > a{
     left: 0;
     height: 40px;
     overflow: hidden;
-    background: #9444b3;
-    background: linear-gradient(90deg, #9444b3, #fd2289);
+    background: var(--bg-color-1);
+    background: linear-gradient(90deg, var(--bg-color-1), var(--bg-color-2));
     width: 100%;
     margin: 0 0;
     clear: both
@@ -529,7 +534,7 @@ header > a{
     letter-spacing: -5px;
     font-weight: 700;
     text-align: center;
-    background: #9444b3;
+    background: var(--bg-color-1);
     border: 0;
     -webkit-box-shadow: inset 0 1px 2px -1px #111;
     box-shadow: inset 0 1px 2px -1px #111
@@ -541,7 +546,7 @@ header > a{
     bottom: -29px;
     left: 0;
     z-index: 250;
-    border-top: 30px solid #9444b3;
+    border-top: 30px solid var(--bg-color-1);
     border-left: 40px solid transparent;
     border-right: 40px solid transparent
 }
@@ -704,8 +709,8 @@ header > a{
 
 .about-section__card-header {
     padding: 20px;
-    background: #9444b3;
-    background: linear-gradient(90deg, #9444b3, #fd2289);
+    background: var(--bg-color-1);
+    background: linear-gradient(90deg, var(--bg-color-1), var(--bg-color-2));
     border-radius: 10px 10px 0 0;
 }
 
@@ -1079,7 +1084,7 @@ header > a{
     display: inline-block;
     width: 90%;
     font-size: 25px;
-    color: #9444b3;
+    color: var(--bg-color-1);
     vertical-align: middle;
     white-space: normal;
     border-bottom: none
@@ -1163,8 +1168,8 @@ header > a{
     bottom: 0;
     z-index: 100;
     width: 100%;
-    background: #fd2289;
-    background: linear-gradient(90deg, #fd2289, #9444b3);
+    background: var(--bg-color-2);
+    background: linear-gradient(90deg, var(--bg-color-2), var(--bg-color-1));
     color: rgba(255, 255, 255, .9);
     -webkit-box-shadow: 0 -2px 2px -1px #111;
     box-shadow: 0 -2px 2px -1px #111;
