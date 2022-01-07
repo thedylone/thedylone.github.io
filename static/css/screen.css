@@ -1,6 +1,7 @@
 :root {
     --bg-color-1:#9444b3;
     --bg-color-2:#fd2289;
+    --footer-height:40px;
 }
 
 @font-face {
@@ -227,7 +228,7 @@ body {
     align-content: center;
     flex-direction: column;
     padding-top: 50px;
-    height: 80%;
+    height: calc(100% - var(--footer-height));
     width: 100%;
     clear: both;
     overflow: hidden;
@@ -261,6 +262,36 @@ body {
     float: left;
     margin: auto;
     width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.project-section {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: var(--footer-height);
+    width: 100%;
+}
+
+.project-section:before,
+.project-section:after {
+    display: block;
+    content: '';
+    clear: both;
+    height: 0
+}
+
+.project-section__header {
+    padding-bottom: 50px;
+    text-align: center;
+    float: left;
+    width: 98%;
+    width: calc(100% - 40px);
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-left: calc(20px);
+    margin-right: calc(20px);
     height: auto;
     margin-top: 0;
     margin-bottom: 0
@@ -336,16 +367,27 @@ a {
     font-size: 18px;
     text-decoration: none;
     outline-style: none;
-    border-bottom: 1px dashed #2c3e50
+    border-bottom: 1px dashed #2c3e50;
+    transition: 0.5s;
 }
 
 a:hover, a:active {
     border-color: transparent
 }
 
-header > a{
+header > a {
     color: rgba(255, 255, 255, .9)
 }
+
+section a {
+    color: inherit;
+    font-size: inherit;
+}
+
+section a:hover {
+    color: var(--bg-color-1)
+}
+
 
 /* 
 .progressjs-inner {
@@ -791,6 +833,7 @@ header > a{
 
 .timeline a{
     font-size: 1em;
+    color: rgba(0, 0, 0, .9);
 }
 
 .timeline__event {
@@ -1168,6 +1211,7 @@ header > a{
     bottom: 0;
     z-index: 100;
     width: 100%;
+    height: var(--footer-height);
     background: var(--bg-color-2);
     background: linear-gradient(90deg, var(--bg-color-2), var(--bg-color-1));
     color: rgba(255, 255, 255, .9);
