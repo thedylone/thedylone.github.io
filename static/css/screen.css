@@ -871,7 +871,7 @@ section a:hover {
 
 .timeline__event__content {
     padding: 20px;
-    background: rgba(255, 255, 255, .9);
+    background: rgba(255, 255, 255, .75);
     -webkit-transition: background-color .5s;
     -o-transition: background-color .5s;
     transition: background-color .5s;
@@ -882,7 +882,7 @@ section a:hover {
 
 .timeline__event__content:hover, .timeline__event__content:active {
     cursor: pointer;
-    background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, .9);
     -webkit-transition: background-color .5s;
     -o-transition: background-color .5s;
     transition: background-color .5s;
