@@ -19,11 +19,27 @@
     <!-- <link rel="stylesheet" href="static/css/custom.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="static/js/body.js"></script>
-    <!-- <script src="static/js/head.js"></script> -->
+    <script src="static/js/head.js"></script>
     <script src="https://kit.fontawesome.com/3bcd4a3e8d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <script>progressJs().setOptions({ overlayMode: true, theme: 'custom' }).start();
+        if (window.attachEvent) {
+            window.attachEvent('onload', function () { progressJs().end(); });
+        } else {
+            if (window.onload) {
+                var curronload = window.onload;
+                var newonload = function () {
+                    curronload();
+                    progressJs().end();
+                };
+                window.onload = newonload;
+            } else {
+                window.onload = function () { progressJs().end(); };
+            }
+        }
+    </script>
     <!-- header-->
     <header class="main-header">
         <div class="first-nav">
@@ -54,7 +70,7 @@
     <!-- error section-->
     <section class="error-section" id="home">
         <div class="container animate__animated" animation-style="fadeIn" animation-duration="0.5s"
-        animation-delay="0s">
+            animation-delay="0s">
             <header class="error-section__header">
                 <h2>404</h2>
                 <h4>how did you get here?</h4>
@@ -68,8 +84,8 @@
     <footer class="main-footer">
         <div class="container">
             <p class="main-footer__copyright"><span>made by thedylone</span></p>
-            <a class="main-footer__gotop js-link js-anchor"
-                style="opacity: 1;" href="#home"><i class="fas fa-arrow-circle-up"></i></a>
+            <a class="main-footer__gotop js-link js-anchor" style="opacity: 1;" href="#home"><i
+                    class="fas fa-arrow-circle-up"></i></a>
             <p class="main-footer__links"><a onclick="openModal($('#modal-credits'))">credits</a></p>
         </div>
     </footer>
@@ -78,7 +94,7 @@
         function openModal(modal) {
             modal.css("display", "block");;
             const body = document.body;
-            body.style.top = -1*window.pageYOffset+'px';
+            body.style.top = -1 * window.pageYOffset + 'px';
             body.style.position = 'fixed';
         }
         window.onclick = function (e) {

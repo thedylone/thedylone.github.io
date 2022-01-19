@@ -158,6 +158,7 @@ body {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -389,7 +390,6 @@ section a:hover {
 }
 
 
-/* 
 .progressjs-inner {
     width: 0
 }
@@ -399,17 +399,17 @@ section a:hover {
 }
 
 .progressjs-theme-custom {
-    background-color: rgba(255, 255, 255, .9);
-    -webkit-transition: all .2s ease-out;
-    -o-transition: all .2s ease-out;
-    transition: all .2s ease-out
+    background-color: rgba(0, 0, 0, .9);
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out
 }
 
 .progressjs-theme-custom .progressjs-inner {
     height: 100%;
-    -webkit-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
-    transition: all .3s ease-out
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out
 }
 
 .progressjs-theme-custom.progressjs-end {
@@ -430,12 +430,26 @@ section a:hover {
     font-size: 120px;
     line-height: 120px;
     font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif
-} */
+}
 
 .main-header {
     position: fixed;
     z-index: 100;
     width: 100%;
+}
+
+.skip-nav-link {
+    background: var(--bg-color-2);
+    height: 40px;
+    padding: 5px;
+    border-radius: 0 0 5px 5px;
+    left: 5px;
+    position: absolute;
+    transform: translateY(-120%);
+}
+
+.skip-nav-link:focus {
+    transform: translateY(0);
 }
 
 .first-nav {

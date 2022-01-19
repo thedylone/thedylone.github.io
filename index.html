@@ -19,15 +19,31 @@
     <!-- <link rel="stylesheet" href="static/css/custom.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="static/js/body.js"></script>
-    <!-- <script src="static/js/head.js"></script> -->
+    <script src="static/js/head.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://kit.fontawesome.com/3bcd4a3e8d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <script>progressJs().setOptions({ overlayMode: true, theme: 'custom' }).start();
+        if (window.attachEvent) {
+            window.attachEvent('onload', function () { progressJs().end(); });
+        } else {
+            if (window.onload) {
+                var curronload = window.onload;
+                var newonload = function () {
+                    curronload();
+                    progressJs().end();
+                };
+                window.onload = newonload;
+            } else {
+                window.onload = function () { progressJs().end(); };
+            }
+        }
+    </script>
     <!-- header-->
     <header class="main-header">
-        <div class="first-nav">
+        <div class="first-nav"><a class="skip-nav-link" href="#about">skip navigation</a>
             <div class="container">
                 <nav class="first-nav__links">
                     <ul>
@@ -371,8 +387,9 @@
                                 rel="nofollow">gorillatype</a></figcaption>
                     </figure>
                     <figure class="projects__item"><img src="projects/images/hnr.png" alt="blender image">
-                        <figcaption><a class="icon icon_link" href="projects.html#hacknroll2022" rel="nofollow">hack&roll 2022
-                                </a></figcaption>
+                        <figcaption><a class="icon icon_link" href="projects.html#hacknroll2022"
+                                rel="nofollow">hack&roll 2022
+                            </a></figcaption>
                     </figure>
                     <figure class="projects__item"><img src="projects/images/1.png" alt="blender image">
                         <figcaption><a class="icon icon_link" href="projects.html#blender" rel="nofollow">blender

@@ -20,12 +20,28 @@
     <link rel="stylesheet" href="type/type.css">
     <script src="../static/js/body.js"></script>
     <script src="type/type.js"></script>
-    <!-- <script src="../static/js/head.js"></script> -->
+    <script src="../static/js/head.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://kit.fontawesome.com/3bcd4a3e8d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <script>progressJs().setOptions({ overlayMode: true, theme: 'custom' }).start();
+        if (window.attachEvent) {
+            window.attachEvent('onload', function () { progressJs().end(); });
+        } else {
+            if (window.onload) {
+                var curronload = window.onload;
+                var newonload = function () {
+                    curronload();
+                    progressJs().end();
+                };
+                window.onload = newonload;
+            } else {
+                window.onload = function () { progressJs().end(); };
+            }
+        }
+    </script>
     <!-- header-->
     <header class="main-header">
         <div class="first-nav">

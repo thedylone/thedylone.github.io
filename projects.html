@@ -19,12 +19,28 @@
     <!-- <link rel="stylesheet" href="static/css/custom.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="static/js/body.js"></script>
-    <!-- <script src="static/js/head.js"></script> -->
+    <script src="static/js/head.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://kit.fontawesome.com/3bcd4a3e8d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <script>progressJs().setOptions({ overlayMode: true, theme: 'custom' }).start();
+        if (window.attachEvent) {
+            window.attachEvent('onload', function () { progressJs().end(); });
+        } else {
+            if (window.onload) {
+                var curronload = window.onload;
+                var newonload = function () {
+                    curronload();
+                    progressJs().end();
+                };
+                window.onload = newonload;
+            } else {
+                window.onload = function () { progressJs().end(); };
+            }
+        }
+    </script>
     <!-- header-->
     <header class="main-header">
         <div class="first-nav">
@@ -95,7 +111,8 @@
             <header class="common-section__header animate__animated" animation-style="fadeIn" animation-duration="0.5s"
                 animation-delay="0s">
                 <h2>hack&roll 2022</h2>
-                <h4><a href="https://devpost.com/software/hop-roll-2022" target="_blank">hop&roll 2022, our submission to hack&roll 2022. won top prize (top 8)</a></h4>
+                <h4><a href="https://devpost.com/software/hop-roll-2022" target="_blank">hop&roll 2022, our submission
+                        to hack&roll 2022. won top prize (top 8)</a></h4>
             </header>
         </div>
     </section>
@@ -131,8 +148,8 @@
                                 class="fab fa-spotify"></i></a>
                         <a href="https://www.instagram.com/lan_dy_lan/" target="_blank"><i
                                 class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/playlist?list=PLNoXhhzDZRr-eVYWu7YmfvaUN9AgfAedn" target="_blank"><i
-                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/playlist?list=PLNoXhhzDZRr-eVYWu7YmfvaUN9AgfAedn"
+                            target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </section>
@@ -144,8 +161,8 @@
     <footer class="main-footer">
         <div class="container">
             <p class="main-footer__copyright"><span>made by thedylone</span></p>
-            <a class="main-footer__gotop js-link js-anchor"
-                style="opacity: 1;" href="#home"><i class="fas fa-arrow-circle-up"></i></a>
+            <a class="main-footer__gotop js-link js-anchor" style="opacity: 1;" href="#home"><i
+                    class="fas fa-arrow-circle-up"></i></a>
             <p class="main-footer__links"><a onclick="openModal($('#modal-credits'))">credits</a></p>
         </div>
     </footer>
