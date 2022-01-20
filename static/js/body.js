@@ -3,7 +3,9 @@
     d = jQuery, p = window, h = document, n = { navAnchor: "js-anchor", navLink: "js-link", navIcon: "js-navcontrol", navClosed: "is-closed", activeLink: "is-selected", state: "closed" }, (t = function(e, t) { this.options = d.extend({}, n, t), this.element = e, this.init() }).prototype.init = function() {
         var e, t, s, l, u, n, r, c, f, i, o;
         for (l = d(this.element), e = d("." + this.options.navAnchor), s = d("." + this.options.navLink), t = d("." + this.options.navIcon), r = this.options.state, o = l.show().height(), c = l.show().outerHeight(!0), u = [], f = void 0, r && "closed" !== r ? t.show() : (l.show().toggleClass(this.options.navClosed), t.show().addClass(this.options.navClosed)), t.on("click", d.proxy(function(e) { e.preventDefault(), l.add(t).toggleClass(this.options.navClosed) }, this)), e.on("click", function() { var e; if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname && (e = (e = d(this.hash)).length ? e : d("[name=" + this.hash.slice(1) + "]")).length) return d("html,body").animate({ scrollTop: e.offset().top - o }, 1e3), !1 }), f = 0; f < s.length;) i = s[f], n = d(i).attr("href"), u.push(n), f += 1;
-        d(p).ready(function(){
+        d('body').imagesLoaded( { background: true }, function(){
+            $('body').addClass('loaded');
+            setTimeout(function(){}, 10000)
             var e, t, n, r, i, o, a, w;
             for (a = d(p).scrollTop(), o = d(p).height(), t = d(h).height(), e = d("section").eq(0), f = 0; f < u.length;){
                 i = u[f], r = d(i).offset().top - c, n = d(i).height();
