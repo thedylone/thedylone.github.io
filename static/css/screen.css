@@ -856,16 +856,6 @@ section a:hover {
     .home-section__header h1 {
         font-size: 175px
     }
-    .projects__item {
-        float: left;
-        width: 50%;
-        margin-left: 0;
-        margin-right: 0;
-        height: auto;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-bottom: 37.5%
-    }
 }
 
 @media screen and (max-width:960px) {
@@ -923,20 +913,6 @@ section a:hover {
     }
     .home-section__header h1 {
         font-size: 100px;
-    }
-    .about-section__card {
-        float: none;
-        width: 90%;
-        width: calc(100% - 40px);
-    }
-    .about-section__image {
-        display: none;
-    }
-    .projects__item figcaption a {
-        font-size: 20px
-    }
-    .projects__item figcaption a:before {
-        font-size: 18px
     }
 }
 
@@ -998,16 +974,6 @@ section a:hover {
 @media screen and (max-width:480px) {
     .home-section__header h1 {
         font-size: 70px;
-    }
-    .projects__item {
-        float: left;
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        height: auto;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-bottom: 75%
     }
 }
 
