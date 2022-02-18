@@ -293,7 +293,6 @@ a {
     font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
     font-size: 18px;
     text-decoration: none;
-    outline-style: none;
     border-bottom: 1px dashed #2c3e50;
     transition: 0.5s;
 }
