@@ -693,6 +693,12 @@ section a:hover {
     text-shadow: 2px 2px 5px #111;  
 }
 
+.home-section__header h2 {
+    font-size: 60px;
+    color: rgba(255, 255, 255, .9);
+    text-shadow: 2px 2px 5px #111;  
+}
+
 .contacts-section {
     position: relative;
 }
@@ -855,6 +861,9 @@ section a:hover {
     .home-section__header h1 {
         font-size: 175px
     }
+    .home-section__header h2 {
+        font-size: 42px
+    }
 }
 
 @media screen and (max-width:960px) {
@@ -912,6 +921,9 @@ section a:hover {
     }
     .home-section__header h1 {
         font-size: 100px;
+    }
+    .home-section__header h2 {
+        font-size: 24px
     }
 }
 
@@ -973,6 +985,9 @@ section a:hover {
 @media screen and (max-width:480px) {
     .home-section__header h1 {
         font-size: 70px;
+    }
+    .home-section__header h2 {
+        font-size: 18px;
     }
 }
 
