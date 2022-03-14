@@ -895,7 +895,7 @@ section a:hover {
 
 @media screen and (max-width:800px) {
     .common-section {
-        padding-top: 50px
+        padding-top: 30px
     }
     .common-section__header {
         padding-bottom: 30px
