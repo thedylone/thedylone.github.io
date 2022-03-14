@@ -5,25 +5,30 @@
         for (l = d(this.element), e = d("." + this.options.navAnchor), s = d("." + this.options.navLink), t = d("." + this.options.navIcon), r = this.options.state, o = l.show().height(), c = l.show().outerHeight(!0), u = [], f = void 0, r && "closed" !== r ? t.show() : (l.show().toggleClass(this.options.navClosed), t.show().addClass(this.options.navClosed)), t.on("click", d.proxy(function (e) { e.preventDefault(), l.add(t).toggleClass(this.options.navClosed) }, this)), e.on("click", function () { var e; if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname && (e = (e = d(this.hash)).length ? e : d("[name=" + this.hash.slice(1) + "]")).length) return d("html,body").animate({ scrollTop: e.offset().top - o }, 1e3), !1 }), f = 0; f < s.length;) i = s[f], n = d(i).attr("href"), u.push(n), f += 1;
         d('body').imagesLoaded({ background: true }, function () {
             $('body').addClass('loaded');
-            var o, a, w, y, z;
-            d(h).find(".animate__animated").each(function () {
-                a = d(p).scrollTop(), o = d(p).height(), z = $(this).offset().top - c, y = d(this).height();
-                if (z - 0.8 * o <= a && a < z + y) {
-                    window.matchMedia("(max-width: 800px)").matches ? w = '0s' : w = $(this).attr("animation-delay");
-                    $(this).css("animation", $(this).attr("animation-style") + " " + $(this).attr("animation-duration") + " forwards " + w + " ease-in-out");
+            var e, t, n, r, i, o, a, w, y, z;
+            for (a = d(p).scrollTop(), o = d(p).height(), t = d(h).height(), e = d("section").eq(0), f = 0; f < u.length; f++) {
+                i = u[f], r = d(i).offset().top - c, n = d(i).height();
+                if (r - 0.5 * o <= a && a < r + n) {
+                    d(i).find(".animate__animated").each(function () {
+                        z = $(this).offset().top - c, y = d(this).height();
+                        if (z - 0.8 * o <= a && a < z + y) {
+                            window.matchMedia("(max-width: 800px)").matches ? w = '0s' : w = $(this).attr("animation-delay");
+                            $(this).css("animation", $(this).attr("animation-style") + " " + $(this).attr("animation-duration") + " forwards " + w + " ease-in-out");
+                        }
+                    });
                 }
-            });
+            }
         })
         d(p).on("scroll", d.proxy(function () {
-            var e, t, n, r, i, o, a;
+            var e, t, n, r, i, o, a, y, z;
             for (a = d(p).scrollTop(), o = d(p).height(), t = d(h).height(), e = d("section").eq(0), f = 0; f < u.length; f++) {
                 i = u[f], r = d(i).offset().top - c, n = d(i).height();
                 if (r - 0.5 * o <= a && a < r + n) {
                     s.filter("[href='" + i + "']").addClass(this.options.activeLink);
                     d(i).find(".animate__animated").each(function () {
-                        window.matchMedia("(max-width: 800px)").matches ? w = '0s' : w = $(this).attr("animation-delay");
                         z = $(this).offset().top - c, y = d(this).height();
                         if (z - 0.8 * o <= a && a < z + y) {
+                            window.matchMedia("(max-width: 800px)").matches ? w = '0s' : w = $(this).attr("animation-delay");
                             $(this).css("animation", $(this).attr("animation-style") + " " + $(this).attr("animation-duration") + " forwards " + w + " ease-in-out");
                         }
                     });
