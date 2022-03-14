@@ -645,8 +645,8 @@ section a:hover {
 }
 
 .home-section, .home-scene, .home-section__bg {
-    height: 80vh;
-    max-height: 800px;
+    height: auto;
+    max-height: min(80vh, 800px);
 }
 
 .home-section:after {
