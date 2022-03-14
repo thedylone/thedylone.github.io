@@ -9,9 +9,9 @@
     <meta name="description" content="where thedylone shills stuff">
     <meta property="og:title" content="thedylone" />
     <meta property="og:description" content="where thedylone shills stuff" />
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:creator" content="@thedylone">
-    <meta property="twitter:image" content="https://thedylone.github.io/static/images/laffeyplush.png">
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:creator" content="@thedylone" />
+    <meta property="twitter:image" content="https://thedylone.github.io/static/images/laffeyplush.png" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://thedylone.github.io/" />
     <meta property="og:image" content="https://thedylone.github.io/static/images/bg.png" />
@@ -30,9 +30,19 @@
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="static/js/body.js"></script>
     <script src="https://kit.fontawesome.com/3bcd4a3e8d.js" crossorigin="anonymous"></script>
+    <noscript>
+        <style>
+            [class*="fa-"]:before {
+                content: "♥";
+            }
+        </style>
+    </noscript>
 </head>
 
-<body>
+<body class="no-js">
+    <script>
+        $('body').removeClass('no-js');
+    </script>
     <div id="loader-wrapper">
         <div id="loader">
             <p>loading....</p>

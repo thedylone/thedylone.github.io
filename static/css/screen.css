@@ -1,8 +1,8 @@
 :root {
-    --bg-color-1:#9444b3;
-    --bg-color-2:#fd2289;
-    --footer-height:40px;
-    --bg-loading:#1f1f1f;
+    --bg-color-1: #9444b3;
+    --bg-color-2: #fd2289;
+    --footer-height: 40px;
+    --bg-loading: #1f1f1f;
 }
 
 @font-face {
@@ -303,7 +303,7 @@ a:hover, a:active {
     border-color: transparent
 }
 
-header > a {
+header>a {
     color: rgba(255, 255, 255, .9)
 }
 
@@ -358,7 +358,9 @@ section a:hover {
 }
 
 @keyframes typewriter {
-    to {left: calc(100% + 0.6em)}
+    to {
+        left: calc(100% + 0.6em)
+    }
 }
 
 #loader img {
@@ -368,19 +370,20 @@ section a:hover {
 .loaded #loader-wrapper {
     animation: circleIn 1s forwards ease-in-out;
     transform: translateY(-100%);
-    transition: all 0.1s 1s;    
+    transition: all 0.1s 1s;
 }
 
 @keyframes circleIn {
-    to {height: 0; width: 0; margin-top: 0; margin-left: 0;}
+    to {
+        height: 0;
+        width: 0;
+        margin-top: 0;
+        margin-left: 0;
+    }
 }
 
 .loaded {
     overflow: scroll
-}
-
-.no-js #loader-wrapper {
-    display: none;
 }
 
 .main-header {
@@ -455,7 +458,7 @@ section a:hover {
 }
 
 .first-nav__links a.is-selected,
-.first-nav__links a:hover, .first-nav__links a:active  {
+.first-nav__links a:hover, .first-nav__links a:active {
     color: #111;
     border: 0
 }
@@ -663,6 +666,7 @@ section a:hover {
 }
 
 .home-section__bg {
+    position: relative;
     width: 100%;
     height: 100%;
 }
@@ -677,6 +681,7 @@ section a:hover {
 }
 
 .home-section__header-wrapper {
+    position: absolute;
     width: 100%;
     top: 25% !important;
 }
@@ -692,34 +697,34 @@ section a:hover {
     font-weight: 500;
     font-size: 250px;
     color: rgba(255, 255, 255, .9);
-    text-shadow: 2px 2px 5px #111;  
+    text-shadow: 2px 2px 5px #111;
 }
 
 .home-section__header h2 {
     font-size: 60px;
     color: rgba(255, 255, 255, .9);
-    text-shadow: 2px 2px 5px #111;  
+    text-shadow: 2px 2px 5px #111;
 }
 
 .contacts-section {
     position: relative;
 }
 
-.card-frame, .contact-card{
-    display:flex;
-    align-items:center;
+.card-frame, .contact-card {
+    display: flex;
+    align-items: center;
     justify-content: center;
     overflow: hidden;
 }
 
-.card-frame{
+.card-frame {
     width: 100%;
     padding: 100px 0 150px;
-    background:linear-gradient(150deg, #65206e, #bb85f5);
+    background: linear-gradient(150deg, #65206e, #bb85f5);
 }
 
 .contact-card {
-    background:linear-gradient(150deg,#201c29,#423955);
+    background: linear-gradient(150deg, #201c29, #423955);
     z-index: 50;
     -webkit-box-shadow: -4px -4px 4px 0 #111;
     box-shadow: -4px -4px 4px 0#111;
@@ -741,24 +746,24 @@ section a:hover {
     transition: transform 0.3s ease;
 }
 
-.contact-info h1{
+.contact-info h1 {
     font-family: 'amore lettera';
     font-size: 80px;
     border-bottom: 2px dashed rgba(255, 255, 255, .5);
     margin: 2rem;
 }
 
-.contact-socials a{
+.contact-socials a {
     border: none
 }
 
-.contact-socials i{
+.contact-socials i {
     font-size: 2rem;
     color: rgba(255, 255, 255, .4);
     padding: 0.5rem
 }
 
-.contact-socials i:hover, .contact-socials i:active{
+.contact-socials i:hover, .contact-socials i:active {
     color: rgba(255, 255, 255, .7);
     cursor: pointer;
 }
@@ -851,18 +856,23 @@ section a:hover {
     h1 {
         font-size: 55px
     }
+
     h2 {
         font-size: 35px
     }
+
     h3 {
         font-size: 25px
     }
+
     h4 {
         font-size: 18px
     }
+
     .home-section__header h1 {
         font-size: 175px
     }
+
     .home-section__header h2 {
         font-size: 42px
     }
@@ -872,23 +882,28 @@ section a:hover {
     .first-nav__links li {
         margin: 0 7px
     }
+
     .second-nav__logo {
         display: none
     }
+
     .menu {
         padding-left: 0;
         text-align: center
     }
+
     .menu ul {
         padding-top: 0;
         padding-bottom: 0
     }
+
     .menu li {
         margin: 0 9px;
         display: block;
         margin: auto;
         border-bottom: 1px dashed #aaa
     }
+
     .menu li a {
         font-size: 18px;
         border-bottom: none
@@ -899,31 +914,40 @@ section a:hover {
     .common-section {
         padding-top: 30px
     }
+
     .common-section__header {
         padding-bottom: 30px
     }
+
     h1 {
         font-size: 50px
     }
+
     h2 {
         font-size: 30px
     }
+
     h3 {
         font-size: 20px
     }
+
     h5 {
         font-size: 16px
     }
+
     p {
         font-size: 16px
     }
+
     .home-section, .home-scene, .home-section__bg {
         height: auto;
         max-height: 800px;
     }
+
     .home-section__header h1 {
         font-size: 100px;
     }
+
     .home-section__header h2 {
         font-size: 24px
     }
@@ -942,6 +966,7 @@ section a:hover {
         margin-top: 0;
         margin-bottom: 0
     }
+
     .first-nav__navcontrol {
         float: left;
         width: 6.33333%;
@@ -955,28 +980,34 @@ section a:hover {
         margin-bottom: 0;
         margin-left: 0;
     }
+
     .first-nav__navcontrol:before {
         margin-right: 0
     }
+
     /* .home-section__header {
         padding: 100px 0 75px;
     } */
     .contact-info h1 {
         font-size: 50px;
     }
-    .contact-socials i{
+
+    .contact-socials i {
         font-size: 1.5rem;
         padding: 0.3rem;
     }
+
     .main-footer__copyright {
         margin: 0;
         padding-top: 40px;
         line-height: 1
     }
+
     .main-footer__links {
         margin: 0;
         padding-top: 0
     }
+
     .main-footer__copyright,
     .main-footer__links {
         float: none;
@@ -988,6 +1019,7 @@ section a:hover {
     .home-section__header h1 {
         font-size: 70px;
     }
+
     .home-section__header h2 {
         font-size: 18px;
     }
@@ -998,4 +1030,17 @@ section a:hover {
         animation: none;
         opacity: 1;
     }
+}
+
+.no-js * {
+    animation: none;
+    opacity: 1;
+}
+
+.no-js {
+    overflow: scroll;
+}
+
+.no-js #loader-wrapper {
+    display: none;
 }
