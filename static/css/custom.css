@@ -19,6 +19,7 @@
     height: auto;
     margin-top: 200px;
     margin-bottom: 0;
+    transition: width 1s;
 }
 
 .about-section__card-header {
@@ -68,7 +69,7 @@
 .about-section__image {
     margin-top: 300px;
     float: right;
-    width: calc(30%);
+    width: 30%;
 }
 
 .about-section__image__frame{
