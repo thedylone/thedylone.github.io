@@ -51,7 +51,8 @@
     </div>
     <!-- header-->
     <header class="main-header">
-        <div class="first-nav"><a class="skip-nav-link" href="#about">skip navigation</a>
+        <a class="skip-nav-link" href="#about">skip navigation</a>
+        <div class="first-nav">
             <div class="container">
                 <nav class="first-nav__links">
                     <ul>
@@ -160,9 +161,9 @@
                 <script>
                     function toggleTimeline(obj) {
                         var state = obj.find(".timeline__event__description").css("display");
-                        $(".timeline__event__description").slideUp(500)
+                        $(".timeline__event__description").slideUp(500);
                         if (state == "none") {
-                            obj.find(".timeline__event__description").slideDown(500)
+                            obj.find(".timeline__event__description").slideDown(500);
                         }
                     }
                 </script>
@@ -461,7 +462,7 @@
             body.style.position = 'fixed';
         }
         window.onclick = function (e) {
-            modal = document.getElementById("modal-credits")
+            modal = document.getElementById("modal-credits");
             if (e.target == modal) {
                 modal.style.display = "none";
                 const body = document.body;
