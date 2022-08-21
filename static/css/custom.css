@@ -283,6 +283,45 @@
     color: #a61910;
 }
 
+/* timeline type dsta */
+
+.timeline__event--dsta .timeline__event__icon:before {
+    background: linear-gradient(rgb(0, 35, 119), rgba(0, 35, 119, 0))
+}
+
+.timeline__event--dsta .timeline__event__icon {
+    background: #002377;
+    color: #f85b03;
+}
+
+.timeline__event--dsta .timeline__event__date {
+    color: #5383f1;
+}
+
+.timeline__event--dsta .timeline__event__title {
+    color: #002377;
+}
+
+
+/* timeline type imperial */
+
+.timeline__event--imperial .timeline__event__icon:before {
+    background: linear-gradient(rgb(0, 62, 116), rgba(0, 62, 116, 0))
+}
+
+.timeline__event--imperial .timeline__event__icon {
+    background: #003e74;
+    color: #D4EFFC;
+}
+
+.timeline__event--imperial .timeline__event__date {
+    color: #D4EFFC;
+}
+
+.timeline__event--imperial .timeline__event__title {
+    color: #003E74;
+}
+
 /* last timeline */
 
 .timeline__event:last-child .timeline__event__icon:before {
