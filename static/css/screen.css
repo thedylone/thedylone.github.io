@@ -836,6 +836,8 @@ section a:hover {
     height: 100%;
     overflow: auto;
     background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
@@ -851,6 +853,12 @@ section a:hover {
     border-radius: 10px;
     -webkit-animation: 0.5s fadeIn 0s ease-out;
     animation: 0.5s fadeIn 0s ease-out;
+}
+
+.modal-content__image {
+    max-height: 75vh;
+    max-width: 75vw;
+    margin: auto;
 }
 
 @media screen and (max-width:1200px) {
